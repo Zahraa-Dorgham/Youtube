@@ -267,3 +267,29 @@ border-radius: 30px 0 0 30px;
         justify-content: space-between;
     }
 }
+.video iframe {
+    
+    border-radius:9px ;
+    left: 20px;
+}
+.sugg {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+.sugg h5 {
+    margin: 0;
+    font-size: 16px;
+    color: #030303;
+}
+.sugg iframe {
+    
+    border-radius: 8px;
+    margin: 10px;
+}
+.parent {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
