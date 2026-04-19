@@ -1,24 +1,204 @@
-.mynav{
+.mynav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: px 20px;
+    padding: 8px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    gap: 20px;
+}
 
-    
-}
- .mynav img{
-    width: 110px;
-    height: 60px;
-}
-.serach{
+/* Logo Section */
+.nav-logo {
+    flex-shrink: 0;
+    cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: space-around;
 }
-.mynav input{
-    width: 400px;
-    height: 30px;
+
+.nav-logo img {
+    width: 110px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.nav-logo:hover {
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+/* Search Section */
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    flex: 1;
+    max-width: 480px;
+}
+
+.search input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px;
+    padding: 0 16px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+    font-family: --system-ui, -apple-system, sans-serif;
+}
+
+.search input:focus {
+    border-color: #065fd4;
+    box-shadow: 0 0 0 2px rgba(6, 95, 212, 0.1);
+}
+
+.search input::placeholder {
+    color: #909090;
+}
+
+.search-btn {
+    height: 40px;
+    width: 65px;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 20px 20px 0;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.search-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.search-btn:active {
+    background-color: #e8e8e8;
+}
+
+/* Right Nav Icons */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+/* Create Button */
+.create-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #030303;
+    transition: all 0.2s ease;
     border-radius: 20px;
-   
-    padding: 10px;
+}
+
+.create-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.create-btn:active {
+    background-color: #e8e8e8;
+}
+
+/* Icon Buttons */
+.nav-icon-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    color: #030303;
+}
+
+.nav-icon-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.nav-icon-btn:active {
+    background-color: #e8e8e8;
+}
+
+/* Profile Button */
+.profile-btn {
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.profile-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mynav {
+        padding: 8px 12px;
+        gap: 10px;
+    }
+
+    .search {
+        max-width: 300px;
+    }
+
+    .search input {
+        font-size: 13px;
+        padding: 0 12px;
+    }
+
+    .create-btn span {
+        display: none;
+    }
+
+    .create-btn {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        border-radius: 50%;
+        justify-content: center;
+    }
+
+    .nav-logo img {
+        width: 90px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search {
+        display: none;
+    }
+
+    .mynav {
+        justify-content: space-between;
+    }
 }
