@@ -2,27 +2,50 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 8px 16px;
+    
+    
     position: sticky;
     top: 0;
     z-index: 100;
-    gap: 20px;
+    gap: 0;
 }
 
-/* Logo Section */
+
+.menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+    color: #030303;
+    flex-shrink: 0;
+}
+
+.menu:hover {
+    background-color: #f0f0f0;
+}
+
+
 .nav-logo {
     flex-shrink: 0;
     cursor: pointer;
     display: flex;
     align-items: center;
+    margin-left: 4px;
 }
 
 .nav-logo img {
-    width: 110px;
+    width: 100px;
     height: 60px;
-    object-fit: contain;
+    
+    position: relative;
+    right: 185px;
 }
 
 .nav-logo:hover {
@@ -30,27 +53,36 @@
     transition: opacity 0.2s ease;
 }
 
-/* Search Section */
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex: 1;
+        max-width: 741px;
+            position: relative;
+            right: 84px;
+}
+
 .search {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0;
     flex: 1;
-    max-width: 480px;
 }
 
 .search input {
     width: 100%;
-    height: 40px;
+    height: 44px;
     border: 1px solid #ccc;
-    border-radius: 20px 0 0 20px;
+border-radius: 30px 0 0 30px;
     padding: 0 16px;
     font-size: 14px;
     outline: none;
     transition: all 0.3s ease;
-    font-family: --system-ui, -apple-system, sans-serif;
 }
+
 
 .search input:focus {
     border-color: #065fd4;
@@ -62,17 +94,18 @@
 }
 
 .search-btn {
-    height: 40px;
+    height: 44px;
     width: 65px;
     border: 1px solid #ccc;
     border-left: none;
-    border-radius: 0 20px 20px 0;
+    border-radius: 0 30px 30px 0;
     background-color: #f9f9f9;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
+    color: #030303;
 }
 
 .search-btn:hover {
@@ -83,28 +116,56 @@
     background-color: #e8e8e8;
 }
 
-/* Right Nav Icons */
+
+.mic-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f9f9f9;
+    color: #030303;
+   
+    padding: 0;
+}
+
+.mic-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.mic-btn:hover {
+    background-color: #f0f0f0;
+}
+
+
 .nav-icons {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
     flex-shrink: 0;
 }
 
-/* Create Button */
+
 .create-btn {
     display: flex;
     align-items: center;
     gap: 8px;
     padding: 10px 16px;
-    background-color: transparent;
+
     border: none;
     cursor: pointer;
     font-size: 14px;
     font-weight: 500;
     color: #030303;
-    transition: all 0.2s ease;
+    
     border-radius: 20px;
+    background-color: #f9f9f9;
 }
 
 .create-btn:hover {
@@ -115,7 +176,7 @@
     background-color: #e8e8e8;
 }
 
-/* Icon Buttons */
+
 .nav-icon-btn {
     background-color: transparent;
     border: none;
@@ -138,13 +199,17 @@
     background-color: #e8e8e8;
 }
 
-/* Profile Button */
+
 .profile-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
     width: 40px;
     height: 40px;
     padding: 2px;
     border-radius: 50%;
     overflow: hidden;
+    transition: background-color 0.2s ease;
 }
 
 .user-avatar {
@@ -159,14 +224,14 @@
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .mynav {
         padding: 8px 12px;
         gap: 10px;
     }
 
-    .search {
+    .search-container {
         max-width: 300px;
     }
 
@@ -194,7 +259,7 @@
 }
 
 @media (max-width: 480px) {
-    .search {
+    .search-container {
         display: none;
     }
 
